@@ -8,7 +8,11 @@ MParticle.sharedInstance().setUserIdentity("<user's email>", identityType: .Emai
 
 ```
 ```javascript
-github “mparticle/mparticle-apple-sdk” ~> 6.0
+//Set User Customer ID 
+MParticle.getInstance().setUserIdentity("<CustomerID>", MParticle.IdentityType.CustomerId); 
+//Set User Email Address
+MParticle.getInstance().setUserIdentity("<user's email address>", MParticle.IdentityType.Email);
+
 ```
 
 ```javascript
