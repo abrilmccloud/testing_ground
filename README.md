@@ -1,6 +1,11 @@
 
 ```javascript
-github “mparticle-integrations/mparticle-apple-integration-branchmetrics” ~> 6.0
+<?xml version=”1.0” encoding=”utf-8” ?>
+<!-- ex. src/main/res/values/mparticle.xml -->
+<resources>
+    <string name=”mp_key”>APP KEY</string>
+    <string name=”mp_secret”>APP SECRET</string>
+</resources>
 ```
 
 ```javascript
