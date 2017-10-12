@@ -1,30 +1,20 @@
 
 ```javascript
-//Define the Transaction attributes
-TransactionAttributes txnAttributes = new TransactionAttributes(“<ORDER ID>”)
-                .setRevenue(<Total>)
-                .setTax(<Tax>)
-                .setShipping(<Total Shipping Cost>)
-
-//Define the Transaction attributes
-Map<String, String> commEventAttrs = new HashMap<String, String>();
-commEventAttrs.put(“Sample Purchase Attribute“, “<value>”);
-
-//Create the Transaction event and attributes
-CommerceEvent txnEvent = new CommerceEvent.Builder(Product.PURCHASE, 
-builderProduct).products(productList).
-transactionAttributes(txnAttributes).
-currency(“<currency>”).customAttributes(commEventAttrs).build();
-        
-//Create the Transaction Commerce Event
-MParticle.getInstance().logEvent(txnEvent);
-
+github “mparticle-integrations/mparticle-apple-integration-branchmetrics” ~> 6.0
 ```
 
 ```javascript
-Map<String, String> eventInfo = new HashMap<String, String>();
-eventInfo.put(“Custom Attribute”, <value>);
-MPEvent event = new MPEvent.Builder(“Login - Success”, MParticle.EventType.Other).info(eventInfo).build(); MParticle.getInstance().logEvent(event);
-//Also set User Identifiers and Attributes
-
+target ‘<Your Target>’ do
+    pod ‘mParticle-Appboy’, ‘~> 6’
+    pod ‘mParticle-BranchMetrics’, ‘~> 6’
+    pod ‘mParticle-Localytics’, ‘~> 6’
+end
+```
+```javascript
+dependencies {
+    compile (
+        ‘com.mparticle:android-example-kit:4.16.2’,
+        ‘com.mparticle:android-another-kit:4.16.2’
+    )
+}
 ```
