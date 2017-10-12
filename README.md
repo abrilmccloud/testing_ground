@@ -11,7 +11,9 @@ Map<String, String> commEventAttrs = new HashMap<String, String>();
 commEventAttrs.put(“Sample Purchase Attribute“, “<value>”);
 
 //Create the Transaction event and attributes
-CommerceEvent txnEvent = new CommerceEvent.Builder(Product.PURCHASE, builderProduct).products(productList).transactionAttributes(txnAttributes).
+CommerceEvent txnEvent = new CommerceEvent.Builder(Product.PURCHASE, 
+builderProduct).products(productList).
+transactionAttributes(txnAttributes).
 currency(“<currency>”).customAttributes(commEventAttrs).build();
         
 //Create the Transaction Commerce Event
