@@ -1,9 +1,11 @@
 # # Uncomment the line below if you’re using Swift or would like to use dynamic frameworks (recommended but not required)
 # use_frameworks!
 ```javascript
-target '<Your Target>' do
-    pod 'mParticle-Apple-SDK', '~> 6'
-End
+//Set User Customer ID 
+MParticle.sharedInstance().setUserIdentity(""<CustomerID>"",identityType: .CustomerId)
+//Set User Email Address
+MParticle.sharedInstance().setUserIdentity("<user's email>", identityType: .Email)
+
 ```
 ```javascript
 github “mparticle/mparticle-apple-sdk” ~> 6.0
