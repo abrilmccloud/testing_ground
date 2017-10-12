@@ -22,7 +22,8 @@ import mParticle_Apple_SDK
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions:
 [NSObject: AnyObject]?) -> Bool {
     // Other code goes here, prior to initializing the mParticle SDK
-    MParticle.sharedInstance().startWithKey("<<<App Key Here>>>", secret:"<<<App Secret Here>>>")
+    MParticle.sharedInstance().startWithKey("<<<App Key Here>>>", 
+    secret:"<<<App Secret Here>>>")
     return true
 }
 ```
