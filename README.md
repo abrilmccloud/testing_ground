@@ -17,7 +17,7 @@ application:didFinishLaunchingWithOptions: delegate call.
 application:didFinishLaunchingWithOptions:
 ```
 
-```swift
+```javascript
 import mParticle_Apple_SDK
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Other code goes here, prior to initializing the mParticle SDK
