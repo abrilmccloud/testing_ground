@@ -1,24 +1,21 @@
 
 ```javascript
-//Create Custom Attributes to add to Purchase event
-var attributes = [String: String]()
-attributes[“Sample Purchase Attribute“] = “<value>”
-commerceEvent.setCustomAttributes(attributes)
+//Define the Transaction attributes
+TransactionAttributes txnAttributes = new TransactionAttributes(“<ORDER ID>”)
+                .setRevenue(<Total>)
+                .setTax(<Tax>)
+                .setShipping(<Total Shipping Cost>)
 
 //Define the Transaction attributes
-var txnattributes = MPTransactionAttributes()
-txnattributes.transactionId = “<Order Number>”
-txnattributes.revenue = “<Total>”
-txnattributes.tax = “<Tax>”
-txnattributes.shipping = “<Shipping>”
+Map<String, String> commEventAttrs = new HashMap<String, String>();
+commEventAttrs.put(“Sample Purchase Attribute“, “<value>”);
 
 //Create the Transaction event and attributes
-txnEvent.transactionAttributes = txnattributes
-txnEvent.currency = “<currency>”
-MParticle.sharedInstance().logCommerceEvent(txnEvent)
-
+CommerceEvent txnEvent = new CommerceEvent.Builder(Product.PURCHASE, builderProduct).products(productList).transactionAttributes(txnAttributes).currency(“<currency>”).customAttributes(commEventAttrs).build();
+        
 //Create the Transaction Commerce Event
-var txnEvent = MPCommerceEvent(action: MPCommerceEventAction.purchase, 
+MParticle.getInstance().logEvent(txnEvent);
+
 ```
 
 ```javascript
