@@ -1,16 +1,15 @@
 
 ```javascript
-//Set User Customer ID 
-MParticle.sharedInstance().setUserIdentity(""<CustomerID>"",identityType: .CustomerId)
-//Set User Email Address
-MParticle.sharedInstance().setUserIdentity("<user's email>", identityType: .Email)
-
+var attributes = [String: String]()
+attributes[“Custom Attribute”] = “<value>”
+MParticle.sharedInstance().logEvent(“Login - Success”, eventType: .Other, eventInfo: attributes)
+//Also set User Identifiers and Attributes
 ```
 
 ```javascript
-//Set User Customer ID 
-MParticle.getInstance().setUserIdentity("<CustomerID>", MParticle.IdentityType.CustomerId); 
-//Set User Email Address
-MParticle.getInstance().setUserIdentity("<user's email address>", MParticle.IdentityType.Email);
+Map<String, String> eventInfo = new HashMap<String, String>();
+eventInfo.put(“Custom Attribute”, <value>);
+MPEvent event = new MPEvent.Builder(“Login - Success”, MParticle.EventType.Other).info(eventInfo).build(); MParticle.getInstance().logEvent(event);
+//Also set User Identifiers and Attributes
 
 ```
