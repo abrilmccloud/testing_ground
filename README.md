@@ -1,9 +1,24 @@
 
 ```javascript
+//Create Custom Attributes to add to Purchase event
 var attributes = [String: String]()
-attributes[“Custom Attribute”] = “<value>”
-MParticle.sharedInstance().logEvent(“Login - Success”, eventType: .Other, eventInfo: attributes)
-//Also set User Identifiers and Attributes
+attributes[“Sample Purchase Attribute“] = “<value>”
+commerceEvent.setCustomAttributes(attributes)
+
+//Define the Transaction attributes
+var txnattributes = MPTransactionAttributes()
+txnattributes.transactionId = “<Order Number>”
+txnattributes.revenue = “<Total>”
+txnattributes.tax = “<Tax>”
+txnattributes.shipping = “<Shipping>”
+
+//Create the Transaction event and attributes
+txnEvent.transactionAttributes = txnattributes
+txnEvent.currency = “<currency>”
+MParticle.sharedInstance().logCommerceEvent(txnEvent)
+
+//Create the Transaction Commerce Event
+var txnEvent = MPCommerceEvent(action: MPCommerceEventAction.purchase, 
 ```
 
 ```javascript
