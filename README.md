@@ -1,6 +1,7 @@
 
 ```swift
-# Uncomment the line below if you're using Swift or would like to use dynamic frameworks (recommended but not required)
+# Uncomment the line below if you're using Swift or would like to use dynamic frameworks 
+(recommended but not required)
 # use_frameworks!
 
 target '<Your Target>' do
