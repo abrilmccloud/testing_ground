@@ -23,3 +23,11 @@ dependencies {
     )
 }
 ```
+```javascript
+# Uncomment the line below if you're using Swift or would like tto use dynamic frameworks
+(recommended but not required)
+# use_frameworks!
+target '<Your Target>'
+    pod 'mParticle-Apple-SDK', '~> 6'
+End
+```
