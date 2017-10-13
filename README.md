@@ -1,24 +1,13 @@
 
 ```swift
-//Create Custom Attributes to add to Purchase event
-var attributes = [String: String]()
-attributes[“Sample Purchase Attribute“] = "<value>"
-commerceEvent.setCustomAttributes(attributes)
+# Uncomment the line below if you're using Swift or would like to use dynamic frameworks (recommended but not required)
+# use_frameworks!
 
-//Define the Transaction attributes
-var txnattributes = MPTransactionAttributes()
-txnattributes.transactionId = "<Order Number>"
-txnattributes.revenue = "<Total>"
-txnattributes.tax = "<Tax>"
-txnattributes.shipping = "<Shipping>"
-
-//Create the Transaction event and attributes
-txnEvent.transactionAttributes = txnattributes
-txnEvent.currency = "<currency>"
-MParticle.sharedInstance().logCommerceEvent(txnEvent)
-
-//Create the Transaction Commerce Event
-var txnEvent = MPCommerceEvent(action: MPCommerceEventAction.purchase, product: nil)
+target '<Your Target>' do
+    pod 'mParticle-Appboy', '~> 6'
+    pod 'mParticle-BranchMetrics', '~> 6'
+    pod 'mParticle-Localytics', '~> 6'
+end
 
 ```
 
