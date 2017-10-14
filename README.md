@@ -1,14 +1,10 @@
 
 ```swift
-# Uncomment the line below if you're using Swift or would like to use dynamic frameworks 
-(recommended but not required)
-# use_frameworks!
+//Set User First Name, Last Name, and a Custom Attribute example
+MParticle.getInstance().setUserAttribute(MParticle.UserAttributes.FIRSTNAME,“<user's first name>”)
+MParticle.getInstance().setUserAttribute(MParticle.UserAttributes.LASTNAME, “<user's last name>”)
+MParticle.getInstance().setUserAttribute("[CUSTOMATTR]", "<value>")
 
-target '<Your Target>' do
-    pod 'mParticle-Appboy', '~> 6'
-    pod 'mParticle-BranchMetrics', '~> 6'
-    pod 'mParticle-Localytics', '~> 6'
-end
 
 ```
 
