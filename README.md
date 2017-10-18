@@ -1,11 +1,6 @@
 
 ```swift
-//Set User First Name, Last Name, and a Custom Attribute example
-MParticle.getInstance().setUserAttribute(MParticle.UserAttributes.FIRSTNAME,“<user's first name>”)
-MParticle.getInstance().setUserAttribute(MParticle.UserAttributes.LASTNAME, “<user's last name>”)
-MParticle.getInstance().setUserAttribute("[CUSTOMATTR]", "<value>")
-
-
+github "mparticle/mparticle-apple-sdk" ~> 6.0
 ```
 
 ```javascript
