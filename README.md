@@ -11,14 +11,15 @@ target ‘<Your Target>’ do
 end
 ```
 ```javascript
-//Set User Customer ID 
-MParticle.sharedInstance().setUserIdentity(‘<CustomerID>’,identityType: .CustomerId)
-//Set User Email Address
-MParticle.sharedInstance().setUserIdentity("<user's email>", identityType: .Email)
+//Set User First Name, Last Name, and a Custom Attribute example
+MParticle.sharedInstance().setUserAttribute("$FirstName", value: "<user first name>")
+MParticle.sharedInstance().setUserAttribute("$LastName", value: "<user last name>")
+MParticle.sharedInstance().setUserAttribute("[CUSTOMATTR]", value: "<VALUE>")
 ```
 ```javascript
-//Set User Customer ID 
-MParticle.getInstance().setUserIdentity(‘<CustomerID>’, MParticle.IdentityType.CustomerId); 
-//Set User Email Address
+//Set User First Name, Last Name, and a Custom Attribute example
+MParticle.getInstance().setUserAttribute(MParticle.UserAttributes.FIRSTNAME,“<user's first name>”)
+MParticle.getInstance().setUserAttribute(MParticle.UserAttributes.LASTNAME, “<user's last name>”)
+MParticle.getInstance().setUserAttribute("[CUSTOMATTR]", "<value>")
 ```
 
