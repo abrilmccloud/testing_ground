@@ -1,5 +1,5 @@
 
-```swift
+```
 dependencies {
     compile (
         'com.mparticle:android-example-kit:4.16.2',
