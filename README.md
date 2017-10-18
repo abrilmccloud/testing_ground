@@ -1,6 +1,11 @@
 
 ```swift
-github "mparticle/mparticle-apple-sdk" ~> 6.0
+dependencies {
+    compile (
+        'com.mparticle:android-example-kit:4.16.2',
+        'com.mparticle:android-another-kit:4.16.2'
+    )
+}
 ```
 
 ```javascript
